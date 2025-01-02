@@ -1,0 +1,163 @@
+
+# QuickFoodApp - User Guide
+
+## Introduction
+
+The **QuickFoodApp** is a Java program designed to manage food delivery orders. Users input customer and restaurant details, select meals, and the app assigns a delivery driver while generating an invoice.
+
+This guide walks you through using the program step by step.
+
+---
+
+## Step 1: Preparing the Environment
+
+1. **Prerequisites**:
+   - Ensure Java 8 or higher is installed on your system.
+   - Place the `QuickFoodApp.java` file and related resources in the same directory.
+
+2. **Driver File**:
+   - Create a `drivers.txt` file in the program directory containing driver details in this format:
+     ```
+     Driver Name, Location, Load
+     ```
+     Example:
+     ```
+     Julie Carty, Cape Town, 6
+     Karol Dunn, Durban, 4
+     Spike Fenton, Johannesburg, 11
+     ```
+
+3. **Compile the Program**:
+   - Open a terminal, navigate to the program directory, and run:
+     ```bash
+     javac QuickFoodApp.java
+     ```
+
+4. **Run the Program**:
+   - Execute the program using:
+     ```bash
+     java QuickFoodApp
+     ```
+
+---
+
+## Step 2: Inputting Customer and Order Information
+
+1. **Enter Order Details**:
+   - Provide the order number when prompted.
+   - Enter customer details: name, contact number, city, address, email, and any special instructions.
+
+2. **Provide Restaurant Information**:
+   - Input the restaurant name, location, and contact number.
+
+---
+
+## Step 3: Ordering Meals
+
+1. **View Menu**:
+   - A menu of pizzas with sizes and prices will be displayed:
+     ```
+     Pizza Menu:
+     1. Margherita (Small: $50, Medium: $70, Large: $90)
+     2. Pepperoni (Small: $60, Medium: $80, Large: $100)
+     ```
+
+2. **Select Pizzas**:
+   - Enter the number for the pizza you want to order.
+   - Choose a size by typing `S` (Small), `M` (Medium), or `L` (Large).
+
+3. **Add More Pizzas**:
+   - After selecting a pizza, you’ll be asked if you want to add another:
+     - Type `y` to add another pizza or `n` to finish.
+
+---
+
+## Step 4: Invoice Generation
+
+1. **Delivery Assignment**:
+   - The app assigns the nearest driver to the restaurant based on location and load.
+
+2. **Invoice Creation**:
+   - An invoice is generated and saved in a folder called `invoices` within the program directory.
+   - Example filename: `invoice_123.txt`.
+
+3. **Console Display**:
+   - The invoice details are printed to the console.
+
+---
+
+## Step 5: Viewing the Invoice
+
+- Navigate to the `invoices` folder to find the generated invoice file, which contains:
+  - Customer and restaurant details
+  - Ordered meals with their quantities and total cost
+  - Assigned driver details
+
+---
+
+## Example Interaction
+
+### Console Input:
+```
+Enter Order Number:
+101
+Enter Customer Name:
+Sarah Johnson
+Enter Contact Number:
+987-654-3210
+Enter City:
+Cape Town
+Enter Address:
+45 Palm Street
+Enter Email:
+sarah.johnson@example.com
+Enter Special Instructions:
+Extra cheese
+Enter Restaurant Name:
+Pizza Haven
+Enter Restaurant Location:
+Cape Town
+Enter Restaurant Contact Number:
+021-123-4567
+
+Pizza Menu:
+1. Margherita (Small: $50, Medium: $70, Large: $90)
+2. Pepperoni (Small: $60, Medium: $80, Large: $100)
+
+Enter the number of the pizza you'd like to order:
+2
+Choose size (S, M, L):
+L
+Would you like to add another pizza? (y/n)
+n
+```
+
+### Console Output:
+```
+Invoice generated successfully!
+--- Invoice ---
+Order Number: 101
+Customer: Sarah Johnson
+Restaurant: Pizza Haven
+Ordered Meals:
+1 x Pepperoni (Large) - $100.00
+Driver: Cayson Warner (Location: Cape Town, Load: 3)
+Total: $100.00
+```
+
+---
+
+## Troubleshooting
+
+- **Invalid Pizza Choice**:
+  - If you select an invalid pizza number or size, the program will prompt you to try again.
+
+- **Missing Drivers File**:
+  - Ensure the `drivers.txt` file exists in the correct format and location.
+
+- **Errors**:
+  - If an error occurs, check the input format and retry.
+
+---
+
+Enjoy using **QuickFoodApp** for your food delivery needs!
