@@ -1,32 +1,11 @@
-# Ignore node_modules directory (if present, for example in full-stack apps)
+# Ignore unnecessary files and directories
 node_modules/
-
-# Ignore Java build output folders
-bin/
-target/
-build/
-out/
-
-# Ignore logs and temp files
 *.log
 *.tmp
-
-# Ignore system files
 .DS_Store
 Thumbs.db
-
-# Ignore Git-related files and folders
 .git/
 .gitignore
-
-# Ignore Docker-related files (optional)
-docker-compose.yml
-.dockerignore
-
-# Ignore environment files
-.env
-.env.local
-.env.*.local
 
 # Ignore IDE/editor configurations
 .vscode/
@@ -34,5 +13,7 @@ docker-compose.yml
 *.swp
 *.swo
 
-# Ignore Java class files (if generated from a non-standard build location)
-*.class
+# Exclude unnecessary folders and files
+Capstone 2 Refactoring Folder/Resources/
+readme.md
+*.jar
