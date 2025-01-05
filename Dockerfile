@@ -1,4 +1,4 @@
 FROM
 nginx
 COPY
-./usr/share/nginx/htm
+./usr/share/nginx/html
