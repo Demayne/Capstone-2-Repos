@@ -5,8 +5,8 @@ FROM openjdk:17-jdk-alpine
 WORKDIR /app
 
 # Copy the source and binary directories into the container
-COPY "Capstone 2 Refactoring Folder/src" /app/src
-COPY "Capstone 2 Refactoring Folder/bin" /app/bin
+COPY "Capstone 2 Refactoring /src" /app/src
+COPY "Capstone 2 Refactoring /bin" /app/bin
 
 # Optional: Set environment variables (e.g., for runtime configs)
 ENV JAVA_OPTS="-Xmx512m"
