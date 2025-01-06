@@ -11,8 +11,8 @@ COPY ["Capstone 2 Refactoring/bin", "/app/bin"]
 # Optional: Set environment variables (e.g., for runtime configs)
 ENV JAVA_OPTS="-Xmx512m"
 
-# Compile the Java program inside the container (if necessary)
-RUN javac /app/src/*.java -d /app/bin
+# Compile the Java program inside the container
+RUN javac $(find /app/src -name "*.java") -d /app/bin
 
 # Specify the default command to run the Java application
 CMD ["java", "-cp", "/app/bin", "QuickFoodApp"]
