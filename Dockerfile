@@ -15,4 +15,4 @@ ENV JAVA_OPTS="-Xmx512m"
 RUN javac /app/src/*.java -d /app/bin
 
 # Specify the default command to run the Java application
-CMD ["java", "-cp", "/app/bin", "Main"]
+CMD ["java", "-cp", "/app/bin", "QuickFoodApp"]
